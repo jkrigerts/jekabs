@@ -27,7 +27,7 @@ jobs:
         run: composer install
       - name: Prepare Laravel Application
         run: |
-          cp .env.ci .env
+          cp .env.example .env
           php artisan storage:link
           php artisan key:generate
       - name: FTP-Deploy-Action
