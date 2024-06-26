@@ -27,7 +27,6 @@ jobs:
         run: composer install
       - name: Prepare Laravel Application
         run: |
-          php artisan migrate
           php artisan storage:link
           php artisan key:generate
       - name: FTP-Deploy-Action
